@@ -1,0 +1,7 @@
+2022-01-09 00:20:00,075 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [pool housekeeper] pool - Thread starvation or clock leap detected (housekeeper delta=3h30s62ms551탎800ns).
+2022-01-09 01:11:11,959 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [pool housekeeper] pool - Thread starvation or clock leap detected (housekeeper delta=51m25s581ms368탎400ns).
+2022-01-09 08:36:57,892 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [pool housekeeper] pool - Thread starvation or clock leap detected (housekeeper delta=4h31m27s697ms599탎900ns).
+2022-01-09 10:58:17,168 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [pool housekeeper] pool - Thread starvation or clock leap detected (housekeeper delta=38m12s616ms706탎200ns).
+2022-01-09 11:35:03,677 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [pool housekeeper] pool - Thread starvation or clock leap detected (housekeeper delta=14m46s4ms6탎200ns).
+2022-01-09 16:29:02,134 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [pool housekeeper] pool - Thread starvation or clock leap detected (housekeeper delta=2h2m55s124ms561탎100ns).
+2022-01-09 17:14:37,809 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8083-exec-9] Resolved [com.ceiba.dominio.excepcion.ExcepcionValorInvalido: La edad del usuario debe ser positiva]

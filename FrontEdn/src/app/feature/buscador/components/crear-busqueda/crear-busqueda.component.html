@@ -1,0 +1,52 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<br>
+<br>
+<br>
+<div class="container" style=" margin-top: 3%;">
+    <div class="row">
+        <div class="col-md-6" style="text-align: center;">
+            <h2>MetaBuscador </h2>
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input [(ngModel)]="buscador.palabra" name="palabra" type="text" class="form-control input-lg"
+                        placeholder="Buscar" id="palabra" (keyup.enter)="Buscar()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <table class='table table-bordered'>
+        <thead>
+            <tr class="bg-success text-white">
+                <th>Sr.No</th>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Tipo Envio</th>
+                <th>Condicion</th>
+                <th>Precio</th>
+                <th>Tienda</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of productos; index as no">
+                <td>{{no+1}}</td>
+                <td><img [src]="i.thumbnail" class="img-fluid" width="100"></td>
+                <td>{{i.title}}</td>
+                <td *ngIf="i.shipping.free_shipping">Envio gratis</td>
+                <td *ngIf="!(i.shipping.free_shipping)">Sin envio gratis</td>
+                <td *ngIf="(i.condition ==='new')">Nuevo</td>
+                <td *ngIf="(i.condition ==='used')">Usado</td>
+                <td *ngIf="(i.condition !=='used' && i.condition !=='new')">Sin mencionar</td>
+                <td>{{i.price | currency}}</td>
+                <td>
+                    <a [href]="i.permalink" class="btn btn-Success">Ir al producto</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

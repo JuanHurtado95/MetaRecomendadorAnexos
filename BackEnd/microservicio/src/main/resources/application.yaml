@@ -1,0 +1,21 @@
+jasypt:
+   encryptor:
+      password: ${jasyptpwd:secretkey}
+      algorithm: PBEWithMD5AndDES
+
+server:
+   port: 8083
+   servlet:
+      context-path: /meta-recomendador
+      session:
+         timeout: 21600s
+
+spring:
+   datasource:
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      type: com.zaxxer.hikari.HikariDataSource
+      jdbcUrl: jdbc:sqlserver://localhost;databaseName=recomendadordb
+      username: sa
+      password: SQL*2315020
+      hikari:
+         poolName: pool

@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a4d5f8; min-height: 62px;">
+  <div style="display: flex; width: 100%;">
+    <div style="width: 50%;">
+      <span class="navbar-brand" style="font-weight: bold; color: white;">Hola {{persona.nombre}}</span>
+    </div> 
+    <div style="width: 50%; display: flex; justify-content: right;">
+      <a class="navbar-brand" style="line-height: 30px;" *ngFor="let item of items" [routerLink]="item.url" routerLinkActive="active">{{item.nombre}}</a>
+    </div>
+  </div>
+</nav>
